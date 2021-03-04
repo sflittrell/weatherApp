@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="./css/style.css">
+
+    <title>Current Weather App</title>
+  </head>
+  <body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+    <!-- Header -->
+        <div class="row">
+            <div class="col">
+                <h1>Your Current Weather App</h1>
+            </div>
+
+    <!-- Input and Submit button -->
+        <div class="row">
+            <div class="col mt-5">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="zip" placeholder="Zip Code" aria-label="Zip Code" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="getWeather">Get Current Weather</button>
+                  </div>
+            </div>
+        </div>
+
+    <!-- Main Info Section -->
+
+    <!-- City -->
+        <div class="row">
+            <div class="col p-2 bg-warning text-center mt-5">
+                <h2>Location</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fs-4 text-center border" id="city">
+                
+            </div>
+        </div>
+
+    <!-- Temperature -->
+        <div class="row">
+            <div class="col p-2 bg-warning text-center mt-5">
+                <h2 class=>Temperature</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center pt-2 pb-2 border" id="kelvin">
+                <h5>Kelvin</h5>273
+            </div>
+            <div class="col text-center pt-2 pb-2 border" id="fahrenheit">
+                <h5>Fahrenheit</h5>
+                32
+            </div>
+            <div class="col text-center pt-2 pb-2 border" id="celsius">
+                <h5>Celsius</h5>
+                0
+            </div>
+        </div>
+
+    <!-- Condition -->
+        <div class="row">
+            <div class="col p-2 bg-warning text-center mt-5">
+                <h2>Current Conditions</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col fs-4 text-center border" id="condition">
+                Light Rain
+            </div>
+    </div>
+
+    <!-- Other - Images -->
+        <div class="row">
+            <div class="col p-2 bg-warning text-center mt-5">
+                <h2>Other Info</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col border">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
