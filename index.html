@@ -13,12 +13,35 @@
   </head>
   <body>
 
+        <!-- Button trigger modal
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#errorModal">
+    Launch demo modal
+  </button> --->
+  
+  <!-- Modal -->
+<!--  <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Error!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="errorAlert">
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
     <!-- Main Container -->
-    <div class="container">
+    <div class="container align-items-center">
 
     <!-- Header -->
-        <div class="row">
-            <div class="col">
+        <div class="row mt-3">
+            <div class="col text-center">
                 <h1>Your Current Weather App</h1>
             </div>
 
@@ -32,11 +55,15 @@
             </div>
         </div>
 
+        <div class="alert alert-warning d-none" role="alert" id="errorAlert">
+            <span id="alertText">e</span>
+        </div>
+
     <!-- Main Info Section -->
 
     <!-- City -->
         <div class="row">
-            <div class="col p-2 bg-warning text-center mt-5">
+            <div class="col p-2 bg-info text-center mt-5 rounded-top">
                 <h2>Location</h2>
             </div>
         </div>
@@ -48,44 +75,39 @@
 
     <!-- Temperature -->
         <div class="row">
-            <div class="col p-2 bg-warning text-center mt-5">
+            <div class="col p-2 bg-info text-center mt-5 rounded-top">
                 <h2 class=>Temperature</h2>
             </div>
         </div>
         <div class="row">
-            <div class="col text-center pt-2 pb-2 border" id="kelvin">
-                <h5>Kelvin</h5>273
+            <div class="col text-center pt-2 pb-2 border" id="kelvin">                
             </div>
-            <div class="col text-center pt-2 pb-2 border" id="fahrenheit">
-                <h5>Fahrenheit</h5>
-                32
+            <div class="col text-center pt-2 pb-2 border" id="fahrenheit">                
             </div>
-            <div class="col text-center pt-2 pb-2 border" id="celsius">
-                <h5>Celsius</h5>
-                0
+            <div class="col text-center pt-2 pb-2 border" id="celsius">                
             </div>
         </div>
 
     <!-- Condition -->
         <div class="row">
-            <div class="col p-2 bg-warning text-center mt-5">
+            <div class="col p-2 bg-info text-center mt-5 rounded-top">
                 <h2>Current Conditions</h2>
             </div>
         </div>
         <div class="row">
             <div class="col fs-4 text-center border" id="condition">
-                Light Rain
             </div>
     </div>
 
     <!-- Other - Images -->
         <div class="row">
-            <div class="col p-2 bg-warning text-center mt-5">
-                <h2>Other Info</h2>
+            <div class="col p-2 bg-info text-center mt-5 rounded-top">
+                <h2>Image</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row text-center">
             <div class="col border">
+                <img class="img-flex" id="image">
             </div>
         </div>
     </div>

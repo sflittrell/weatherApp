@@ -17,6 +17,7 @@ function addNew() {
 const getWeather = document.getElementById('getWeather');
 let data = '';
 let zip = '';
+let errorText = '';
 
 getWeather.addEventListener('click', getInfo);
 
@@ -36,16 +37,18 @@ function getInfo() {
     .catch(function(error) {
         console.log('Error:', error);
         errorText = error.message;
-        // document.getElementById('warning').classList.remove(d-none);
+        document.getElementById('errorAlert').remove('d-none');
+        document.getElementById('alertText').innerHTML = `Something seems to have gone wrong.<br> Please input a valid zip code and try again.<br>${errorText}`;
     });
 }
 
 function renderWeather() {
     document.getElementById('city').innerHTML = data.name;
-    document.getElementById('kelvin').innerHTML = data.main.temp;
-    document.getElementById('fahrenheit').innerHTML = fahrenheit(data.main.temp);
-    document.getElementById('celsius').innerHTML = celsius(data.main.temp);
-    document.getElementById('condition').innerHTML = data.weather[0].main, data.weather[0].description;
+    document.getElementById('kelvin').innerHTML = `<h5>Kelvin</h5>${Math.round(data.main.temp)}`;
+    document.getElementById('fahrenheit').innerHTML = `<h5>Fahrenheit</h5>${fahrenheit(data.main.temp)}`;
+    document.getElementById('celsius').innerHTML = `<h5>Celsius</h5>${celsius(data.main.temp)}`;
+    document.getElementById('condition').innerHTML = `Currently it is <br><strong>${data.weather[0].main}</strong><br><em>with ${data.weather[0].description}</em>`;
+    document.getElementById('image').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
 }
 
 function fahrenheit(x) {
