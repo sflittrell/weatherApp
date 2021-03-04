@@ -37,7 +37,7 @@ function getInfo() {
     .catch(function(error) {
         console.log('Error:', error);
         errorText = error.message;
-        document.getElementById('errorAlert').remove('d-none');
+        document.getElementById('errorAlert').classList.remove('d-none');
         document.getElementById('alertText').innerHTML = `Something seems to have gone wrong.<br> Please input a valid zip code and try again.<br>${errorText}`;
     });
 }
