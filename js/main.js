@@ -50,7 +50,7 @@ function renderWeather() {
     document.getElementById('fahrenheit').innerHTML = `<h5>Fahrenheit</h5>${fahrenheit(data.main.temp)}`;
     document.getElementById('celsius').innerHTML = `<h5>Celsius</h5>${celsius(data.main.temp)}`;
     document.getElementById('condition').innerHTML = `Currently it is <br><strong>${data.weather[0].main}</strong><br><em>with ${data.weather[0].description}</em>`;
-    document.getElementById('image').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    document.getElementById('image').src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
 function fahrenheit(x) {
