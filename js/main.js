@@ -22,6 +22,7 @@ let errorText = '';
 getWeather.addEventListener('click', getInfo);
 
 function getInfo() {
+    document.getElementById('errorAlert').classList.add('d-none');
     zip = document.getElementById('zip').value;
     const API_key = '9daab0d13643711afa61edc69a4cad1b'
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?zip=${zip},&appid=${API_key}`;
@@ -49,7 +50,7 @@ function renderWeather() {
     document.getElementById('fahrenheit').innerHTML = `<h5>Fahrenheit</h5>${fahrenheit(data.main.temp)}`;
     document.getElementById('celsius').innerHTML = `<h5>Celsius</h5>${celsius(data.main.temp)}`;
     document.getElementById('condition').innerHTML = `Currently it is <br><strong>${data.weather[0].main}</strong><br><em>with ${data.weather[0].description}</em>`;
-    document.getElementById('image').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+    document.getElementById('image').src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 }
 
 function fahrenheit(x) {
