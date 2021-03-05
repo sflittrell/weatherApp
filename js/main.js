@@ -38,11 +38,12 @@ function getInfo() {
         console.log('Error:', error);
         errorText = error.message;
         document.getElementById('errorAlert').classList.remove('d-none');
-        document.getElementById('alertText').innerHTML = `Something seems to have gone wrong.<br> Please input a valid zip code and try again.<br>${errorText}`;
+        document.getElementById('errorAlert').innerHTML = `Something seems to have gone wrong.<br> Please input a valid zip code and try again.<br>${errorText}`;
     });
 }
 
 function renderWeather() {
+    document.getElementById('weatherInfo').classList.remove('d-none');
     document.getElementById('city').innerHTML = data.name;
     document.getElementById('kelvin').innerHTML = `<h5>Kelvin</h5>${Math.round(data.main.temp)}`;
     document.getElementById('fahrenheit').innerHTML = `<h5>Fahrenheit</h5>${fahrenheit(data.main.temp)}`;
